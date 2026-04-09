@@ -12,34 +12,85 @@ from langchain_core.tools import tool
 @tool
 def search_hoc_phi(query: str) -> dict[str, Any]:
     """
-    Tìm kiếm thông tin học phí của Vinschool.
+    Tìm kiếm thông tin học phí, chính sách ưu đãi, thời hạn đóng phí của Vinschool từ cơ sở dữ liệu.
     
-    Hiện tại cơ sở dữ liệu đang trống, vui lòng liên hệ với nhà trường để
-    cập nhật thông tin học phí mới nhất.
+    Có thể tìm kiếm các thông tin như:
+    - Biểu phí mầm non, tiểu học, trung học
+    - Các khoản phí khác (bán trú, xe buýt, học phẩm, đồng phục...)
+    - Các chính sách ưu đãi và miễn giảm
+    - Quy định nộp, rút và hoàn phí
     
     Args:
-        query: Từ khóa tìm kiếm (ví dụ: "học phí mầm non", "học phí tiểu học")
+        query: Từ khóa tìm kiếm (ví dụ: "học phí mầm non", "phí xe buýt", "ưu đãi", "chuyển hệ")
     
     Returns:
         dict với các trường:
-        - status: "no_data" | "found"
-        - message: Thông báo kết quả
-        - data: Dữ liệu học phí (nếu có)
-        - tips: Gợi ý liên hệ
+        - status: "found" | "not_found" | "error"
+        - query: Từ khóa tìm kiếm
+        - results: Kết quả tìm kiếm (list)
+        - total_results: Tổng số kết quả
     """
-    # Hiện tại DB học phí để trống
-    hoc_phi_db = {}
+    mam_non_path = os.path.join(os.path.dirname(__file__), "../../data/hoc_phi_mam_non.json")
+    th_path = os.path.join(os.path.dirname(__file__), "../../data/hocphi_th_thcs_thpt.json")
     
+    try:
+        with open(mam_non_path, 'r', encoding='utf-8') as f:
+            mam_non_data = json.load(f)
+        with open(th_path, 'r', encoding='utf-8') as f:
+            th_data = json.load(f)
+    except Exception as e:
+        return {"status": "error", "message": f"Lỗi đọc file học phí: {str(e)}", "results": []}
+
+    query_lower = query.lower()
+    results = []
+    
+    def search_recursive(obj: Any, path: str, source: str):
+        if isinstance(obj, dict):
+            for key, value in obj.items():
+                new_path = f"{path}.{key}" if path else key
+                if query_lower in key.lower():
+                    results.append({"source": source, "path": new_path, "value": value})
+                search_recursive(value, new_path, source)
+        elif isinstance(obj, list):
+            for idx, item in enumerate(obj):
+                new_path = f"{path}[{idx}]"
+                if isinstance(item, dict):
+                    match = False
+                    for k, v in item.items():
+                        if isinstance(v, (str, int, float)) and query_lower in str(v).lower():
+                            match = True
+                            break
+                        if query_lower in str(k).lower():
+                            match = True
+                            break
+                    if match:
+                        results.append({"source": source, "path": new_path, "content": item})
+                    search_recursive(item, new_path, source)
+                else:
+                    if query_lower in str(item).lower():
+                        results.append({"source": source, "path": new_path, "content": item})
+        elif isinstance(obj, str):
+            if query_lower in obj.lower():
+                results.append({"source": source, "path": path, "content": obj})
+
+    search_recursive(mam_non_data, "", "Mầm non")
+    search_recursive(th_data, "", "TH-THCS-THPT")
+    
+    # Lọc bớt các node cha nếu nội dung quá dài có thể chiếm hết context
+    final_results = []
+    seen_paths = set()
+    for res in results:
+        # Nếu path con đã match, có thể path cha cũng match. 
+        # Tạm thời cứ trả về để LLM nhặt thông tin.
+        if res["path"] not in seen_paths:
+            final_results.append(res)
+            seen_paths.add(res["path"])
+            
     return {
-        "status": "no_data",
-        "message": f"Chưa có thông tin học phí cho tìm kiếm: '{query}'",
-        "data": None,
-        "tips": "Vui lòng liên hệ hotline 18006511 hoặc email để được tư vấn học phí chi tiết.",
-        "contact": {
-            "hotline": "18006511",
-            "email_mien_bac": "info.mb@vinschool.edu.vn",
-            "email_mien_nam": "info.mn@vinschool.edu.vn"
-        }
+        "status": "found" if final_results else "not_found",
+        "query": query,
+        "results": final_results[:15],  # Giới hạn 15 kết quả tránh vượt limit context
+        "total_results": len(final_results)
     }
 
 
