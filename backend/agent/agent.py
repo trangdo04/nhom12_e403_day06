@@ -93,7 +93,7 @@ def create_advisor_agent():
     tools = [search_hoc_phi, search_quy_che, search_thong_tin]
     
     # Tạo ReAct agent
-    agent = create_react_agent(
+    agent = create_agent(
         model=llm,
         tools=tools,
         system_prompt=system_prompt,
