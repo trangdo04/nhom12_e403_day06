@@ -1,5 +1,5 @@
-{
-  "chinh_sach_tuyen_sinh_vinschool": {
+{ "title": "Chính sách Tuyển sinh Hệ thống Giáo dục Vinschool Năm học 2026-2027",
+  "categories": {
     "CHINH_SACH_TUYEN_SINH": {
       "thu_tu_uu_tien": [
         {
@@ -73,7 +73,7 @@
       "mon_thi_he_nang_cao": ["Toán (Anh/Việt)", "Tiếng Anh/Nói Tiếng Anh", "Ngữ Văn", "Tư duy nhận thức bằng Tiếng Anh", "Phỏng vấn"]
     },
     "HUONG_DAN_HO_SO": {
-    "1_doi_voi_hoc_sinh_mam_non": [
+    "doi_voi_hoc_sinh_mam_non": [
       {
         "stt": 1,
         "danh_muc": "01 ảnh thẻ cỡ 4x6 của Học sinh mới chụp trong thời gian 01 tháng (bản mềm)",
@@ -123,7 +123,7 @@
         "nop_khi_nhap_hoc": true
       }
     ],
-    "2_doi_voi_hoc_sinh_pho_thong": [
+    "doi_voi_hoc_sinh_pho_thong": [
         {
           "stt": 1,
           "danh_muc": "01 ảnh thẻ cỡ 4x6 của học sinh mới chụp trong thời gian 01 tháng (bản mềm)",

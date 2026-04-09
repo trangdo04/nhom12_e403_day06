@@ -1,0 +1,240 @@
+{ "title": "Chính sách Tuyển sinh Hệ thống Giáo dục Vinschool Năm học 2026-2027",
+  "categories": {
+    "hoc_phi_chinh_khoa": {
+      "hoc_phi": [
+       	  {
+           "dia_diem": "Hà Nội, Hải Phòng, Thanh Hóa, Hưng Yên, TP Hồ Chí Minh",
+           "he_chuan": {
+             "tieu_hoc": { "ca_nam": 78427250, "hoc_ky_1": 39105000, "hoc_ky_2": 43450000 },
+             "thcs": { "ca_nam": 90250000, "hoc_ky_1": 45000000, "hoc_ky_2": 50000000 },
+             "thpt": { "ca_nam": 102163000, "hoc_ky_1": 50940000, "hoc_ky_2": 56600000 }
+           },
+            "he_nang_cao": {
+              "tieu_hoc": { "ca_nam": 146024500, "hoc_ky_1": 72810000, "hoc_ky_2": 80900000 },
+              "thcs_lop_6_8": { "ca_nam": 171114000, "hoc_ky_1": 85320000, "hoc_ky_2": 94800000 },
+              "thpt_lop_9_12": { "ca_nam": 225805500, "hoc_ky_1": 112590000, "hoc_ky_2": 125100000 }
+            }
+          },
+          {
+            "dia_diem": "Phú Quốc",
+            "he_chuan": {
+              "tieu_hoc": { "ca_nam": 48283750, "hoc_ky_1": 24075000, "hoc_ky_2": 26750000 },
+              "thcs": { "ca_nam": 56767250, "hoc_ky_1": 28305000, "hoc_ky_2": 31450000 },
+              "thpt": { "ca_nam": 63987250, "hoc_ky_1": 31905000, "hoc_ky_2": 35450000 }
+            },
+            "he_nang_cao": null
+          }
+      ],
+      "quy_dinh_muc_nop_hoc_phi": [
+        {
+          "thoi_diem_nhap_hoc": "17/08/2026 - 30/09/2026",
+          "ty_le_hoc_phi": "100% học phí cả năm"
+        },
+        {
+          "thoi_diem_nhap_hoc": "01/10/2026 - 31/12/2026",
+          "ty_le_hoc_phi": "70% học phí kì 1 + 100% học phí kì 2"
+        },
+        {
+          "thoi_diem_nhap_hoc": "01/01/2027 - 15/02/2027",
+          "ty_le_hoc_phi": "100% học phí kì 2"
+        },
+        {
+          "thoi_diem_nhap_hoc": "16/02/2027 - 31/05/2027",
+          "ty_le_hoc_phi": "70% học phí kì 2"
+        }
+      ]
+    },
+    "chinh_sach_uu_dai": [
+      {
+        "thu_tu": 1 ,
+        "doi_tuong": "Tất cả học sinh" ,
+        "uu_dai": "Voucher tri ân, gói ưu đãi"
+      },
+      {
+        "thu_tu": 2 ,
+        "doi_tuong": "Học sinh có thành tích học tập xuất sắc" ,
+        "uu_dai": "Học bổng"
+      },
+      {
+        "thu_tu": 3 ,
+        "doi_tuong": "Con ruột hoặc con nuôi hợp pháp của CBNV Tập đoàn Vingroup",
+        "uu_dai": "Học phí chính khóa"
+      },
+      {
+        "thu_tu": 4 ,
+        "doi_tuong": "Anh/chị/em đang cùng học tại VinSchool",
+        "uu_dai": "Phí dịch vụ xe bus"
+      },
+      {
+        "thu_tu": 5 ,
+        "doi_tuong": " Thành viên Vinclub",
+        "uu_dai": "Chiết khấu"
+      },
+      {
+        "thu_tu": 6 ,
+        "doi_tuong": "Học sinh đóng phí theo năm",
+        "uu_dai": "Học phí chính khóa, phí dịch vụ xe bus, phí dịch vụ bán trú"
+      }
+    ],
+
+    "cac_khoan_phi_khac": {
+      "phi_dang_ky_tuyen_sinh_chuyen_he": [
+        {
+          "dia_diem": "Hà Nội, Hải Phòng, Thanh Hóa, Hưng Yên, TP Hồ Chí Minh",
+          "phi_dang_ky_tuyen_sinh": "3.000.000 đồng",
+          "phi_chuyen_he": "700.000 đồng"
+        },
+        {
+          "dia_diem": "Phú Quốc",
+          "phi_dang_ky_tuyen_sinh": "1.500.000 đồng",
+          "phi_chuyen_he": null
+        }
+      ],
+      "phi_dich_vu_ban_tru": [
+        {
+          "dia_diem": "Hà Nội, Hải Phòng, Thanh Hóa, Hưng Yên",
+          "tieu hoc": {"hoc_ky_1": "8.100.000 đồng", "hoc_ky_2": "9.000.000 đồng", "ca_nam": "16.245.000 đồng"},
+          "thcs_thpt": {"hoc_ky_1": "8.550.000 đồng", "hoc_ky_2": "9.500.000 đồng", "ca_nam": "17.147.500 đồng"}
+        },
+        {
+          "dia_diem": "TP Hồ Chí Minh",
+          "tieu hoc": {"hoc_ky_1": "9.000.000 đồng", "hoc_ky_2": "10.000.000 đồng", "ca_nam": "18.050.000 đồng"},
+          "thcs_thpt": {"hoc_ky_1": "10.350.000 đồng", "hoc_ky_2": "11.500.000 đồng", "ca_nam": "20.757.500 đồng"}
+        },
+        {
+          "dia_diem": "Phú Quốc",
+          "tieu hoc": {"hoc_ky_1": "8.550.000 đồng", "hoc_ky_2": "9.500.000 đồng", "ca_nam": "17.147.500 đồngg"},
+          "thcs_thpt": {"hoc_ky_1": "8.550.000 đồng", "hoc_ky_2": "9.500.000 đồng", "ca_nam": "17.147.500 đồngg"}
+        }
+      ],
+      "phi_phat_trien_truong": [
+        {
+          "dia_diem": "Hà Nội, Hải Phòng, Thanh Hóa, Hưng Yên, TP Hồ Chí Minh",
+          "phi_phat_trien_truong": "4.200.000 đồng",
+          "luu_y": "Học sinh nhập học vào kỳ 2 đóng 50% phí phát triển trường"
+        },
+        {
+          "dia_diem": "Phú Quốc",
+          "phi_phat_trien_truong": "3.000.000 đồng",
+            "luu_y": "Học sinh nhập học vào kỳ 2 đóng 50% phí phát triển trường"
+        }
+      ],
+      "phi_hoc_pham": [
+        {
+          "dia_diem": "Hà Nội, Hải Phòng, Thanh Hóa, Hưng Yên, TP Hồ Chí Minh",
+          "phi_hoc_pham": "2.700.000 đồng"
+        },
+        {
+          "dia_diem": "Phú Quốc",
+          "phi_hoc_pham": "2.380.000 đồng"
+        }
+      ],
+      "phi_dong_phuc": [
+        {
+          "dia_diem": "Hà Nội, Hải Phòng, Thanh Hóa, Hưng Yên",
+          "tieu_hoc": {"nu": "2.110.000 đồng/set", "nam": "2.100.000 đồng/set"},
+          "thcs": {"nu": "2.540.000 đồng/set", "nam": "2.530.000 đồng/set"},
+          "thpt": {"nu": "2.540.000 đồng/set", "nam": "2.580.000 đồng/set"}
+        },
+        {
+          "dia_diem": "TP Hồ Chí Minh",
+          "tieu_hoc": {"nu": "1.940.000 đồng/set", "nam": "1.850.000 đồng/set"},
+          "thcs": {"nu": "2.250.000 đồng/set", "nam": "2.460.000 đồng/set"},
+          "thpt": {"nu": "2.250.000 đồng/set", "nam": "2.310.000 đồng/set"}
+        },
+        {
+          "dia_diem": "Phú Quốc",
+          "tieu_hoc": {"nu": "1.940.000 đồng/set", "nam": "1.850.000 đồng/set"},
+          "thcs": {"nu": "2.250.000 đồng/set", "nam": "2.460.000 đồng/set"},
+          "thpt": {"nu": "2.250.000 đồng/set", "nam": "2.310.000 đồng/set"}
+        }
+      ],
+      "phi_hoat_dong_trai_nghiem": {
+        "phi": "1.500.000",
+        "luu_y": "Học sinh nhập học vào kỳ 2 đóng 50%"
+      },
+      "phi_cong_thong_tin_dien_tu": {
+        "phi": "400.000",
+        "luu_y": "Học sinh nhập học vào kỳ 2 đóng 50%"
+      },
+      "phi_bao_hiem_y_te": {
+        "phi": "Tạm thu 1.000.000 đồng và tất toán vào cuối năm học",
+        "luu_y": "Học sinh là con quân nhân đã được cấp BHYT còn hạn sử dụng sẽ không phải đóng phí bảo hiểm y tế"
+      },
+      "phi_dich_vu_xe_bus": [
+        {
+          "dia_diem": "Hà Nội, Hải Phòng, Thanh Hóa, Hưng Yên",
+          "bieu_phi": [
+            {"loai_hinh": "đón tại nhà", "hoc_ky_1": "11.700.000 đồng", "hoc_ky_2": "13.000.000 đồng", "ca_nam": "23.465.000 đồng"},
+            {"loai_hinh": "đón tại điểm đón", "hoc_ky_1": "7.200.000 đồng", "hoc_ky_2": "8.000.000 đồng", "ca_nam": "14.440.000 đồng"}
+          ]
+        },
+        {
+          "dia_diem": "TP Hồ Chí Minh",
+          "bieu_phi": [
+            {"khoang_cach": "dưới 3km", "hoc_ky_1": "10.800.000 đồng", "hoc_ky_2": "12.000.000 đồng", "ca_nam": "21.660.000 đồng"},
+            {"khoang_cach": "từ 3km đến dưới 5km", "hoc_ky_1": "13.500.000 đồng", "hoc_ky_2": "15.000.000 đồng", "ca_nam": "27.075.000 đồng"},
+            {"khoang_cach": "từ 5km đến dưới 8km", "hoc_ky_1": "16.650.000 đồng", "hoc_ky_2": "18.500.000 đồng", "ca_nam": "33.392.500 đồng"},
+            {"khoang_cach": "từ 8km đến dưới 12km", "hoc_ky_1": "19.350.000 đồng", "hoc_ky_2": "21.500.000 đồng", "ca_nam": "38.807.500 đồng"},
+            {"khoang_cach": "từ 12km đến dưới 15km", "hoc_ky_1": "22.050.000 đồng", "hoc_ky_2": "24.500.000 đồng", "ca_nam": "44.222.500 đồng"},
+            {"khoang_cach": "từ 15km đến dưới 20km", "hoc_ky_1": "24.300.000 đồng", "hoc_ky_2": "27.000.000 đồng", "ca_nam": "48.735.000 đồng"}
+          ]
+        },
+        {
+          "dia_diem": "Phú Quốc",
+          "bieu_phi": [
+            {"loai_hinh": "đón tại điểm đón", "diem_don": "Gành Dầu", "hoc_ky_1": "4.500.000 đồng", "hoc_ky_2": "5.000.000 đồng", "ca_nam": "9.025.000 đồng"},
+            {"loai_hinh": "đón tại điểm đón", "diem_don": "Dương Đông/Cửa Cạn/Cửa Dương", "hoc_ky_1": "5.400.000 đồng", "hoc_ky_2": "6.000.000 đồng", "ca_nam": "10.830.000 đồng"},
+            {"loai_hinh": "đón tại điểm đón", "diem_don": "Hàm Ninh/An Thới", "hoc_ky_1": "7.200.000 đồng", "hoc_ky_2": "8.000.000 đồng", "ca_nam": "14.440.000 đồng"},
+            {"loai_hinh": "đón tại nhà", "khoang_cach": "dưới 20km", "hoc_ky_1": "11.700.000 đồng", "hoc_ky_2": "13.000.000 đồng", "ca_nam": "23.465.000 đồng"},
+            {"loai_hinh": "đón tại nhà", "khoang_cach": "từ 20km đến dưới 30km", "hoc_ky_1": "12.600.000 đồng", "hoc_ky_2": "14.000.000 đồng", "ca_nam": "25.270.000 đồng"},
+            {"loai_hinh": "đón tại nhà", "khoang_cach": "từ 30km đến dưới 50km", "hoc_ky_1": "20.250.000 đồng", "hoc_ky_2": "22.500.000 đồng", "ca_nam": "40.612.500 đồng"}
+          ]
+        }
+      ],
+      "phi_thi_chung_chi_Cambrige": {
+        "dia_diem_ap_dung": "Hà Nội, Hải Phòng, Thanh Hóa, Hưng Yên, TP Hồ Chí Minh",
+        "he_ap_dung": "Nâng cao",
+        "tam_thu": [
+          {"lop": 5, "so_mon": 3, "phi": "3.000.000 đồng"},
+          {"lop": 8, "so_mon": 4, "phi": "6.000.000 đồng"},
+          {"lop": 10, "so_mon": 5, "phi": "23.000.000 đồng"},
+          {"lop": 11, "so_mon": 4, "phi": "19.000.000 đồng"},
+          {"lop": 12, "so_mon": 3, "phi": "23.000.000 đồng"}
+        ],
+        "luu_y": "Phần phí chênh lệch sau khi có thông báo của Cambridge sẽ tất toán vào cuối năm"
+      }
+    },
+    "thoi_han_dong_phi_va_phuong_thuc_thanh_toan": {
+      "thoi_han_dong_phi": [
+        {"doi_tuong": "học sinh đang theo học", "loai": "cả năm/kỳ 1", "thoi_han": "01/07/2026"},
+        {"doi_tuong": "học sinh đang theo học", "loai": "kỳ 2", "thoi_han": "15/12/2026"},
+        {"doi_tuong": "học sinh mới nhập học", "loai": "", "thoi_han": "theo thông báo của nhà trường"}
+      ]
+    },
+    "quy_dinh_phi_khi_rut_ho_so_thoi_hoc": {
+      "thong_bao_rut_ho_so": "đăng ký trên app VinschoolOne hoặc thông báo với Phòng tuyển sinh tối thiểu 30 ngày trước khi thôi học",
+      "quy_dinh_hoan_phi": {
+        "hoc_phi": "tính đến ngày học sinh chính thức rút hồ sơ",
+        "phi_dich_vu_ban_tru": "tính đến ngày học cuối cùng của học sinh",
+        "phi_phat_trien_truong": "không được hoàn nay nhượng lại",
+        "phi_hoc_pham": "không được hoàn nay nhượng lại trong trường hợp học sinh đã đi học",
+        "phi_dong_phuc": "chỉ được hoàn tỏng trường hợp rút hồ sơ/thôi học, theo danh mục đồng phục học sinh chưa nhận",
+        "phi_hoat_dong_trai_nghiem": "được hoàn trong trường hợp học sinh rút hồ sơ/thôi học trước ngày đi học chính thức kỳ 1 (hoàn 100%) và trước ngày đi học chính thức kỳ 2 (hoàn 50%)",
+        "phi_cong_thong_tin_dien_tu": "được hoàn trong trường hợp học sinh rút hồ sơ/thôi học trước ngày đi học chính thức kỳ 1 (hoàn 100%) và trước ngày đi học chính thức kỳ 2 (hoàn 50%)",
+        "phi_bao_hiem_y_te": "chỉ được hoàn lại trong trường hợp nhà trường chưa gửi danh sách đăng ký tới cơ quan Nhà nước",
+        "phi_dich_vu_xe_bus": "tính từ ngày thông báo đến 15 ngày sau"
+      },
+      "thoi_han_hoan_phi": "trong vòng 30 ngày từ ngày nhận được thông tin tài khoản ngân hàng của phụ huynh hoặc từ ngày học cuối cùng của học sinh (tùy vào thời điểm nào đến sau)",
+      "quy_dinh_tra_ho_so": {
+        "thoi_han": "03 ngày làm việc",
+        "dieu_kien": [
+          "học sinh đã dừng học tại trường",
+          "phụ huynh đã nộp đầy đủ hồ sơ chuyển trường theo quy định",
+          "phụ huynh đã hoàn thành tất cả nghĩa vụ tài chính theo quy định"
+        ]
+      },
+      "truong_hop_bat_kha_khang": "việc thu và hoàn phí được nhà trường công bố căn cứ theo thực tế tại thời điểm đó"
+    }
+  }
+}
