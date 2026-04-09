@@ -23,14 +23,7 @@ Nhom12-E403-Day06/
 │   ├── requirements.txt
 │   ├── .env.example                # Mẫu biến môi trường
 │   ├── agent/
-│   │   ├── agent.py                # Điều phối toàn bộ flow
-│   │   ├── extractor.py            # LLM trích xuất tuổi, khu vực, intent
-│   │   ├── rules.py                # Rule: tuổi → cấp học, khu vực → cơ sở
-│   │   └── responder.py            # LLM sinh câu trả lời tự nhiên
-│   ├── services/
-│   │   └── llm.py                  # Wrapper gọi Gemini hoặc OpenAI
 │   └── data/
-│       └── knowledge_base.json     # Dữ liệu: cơ sở, chương trình, CTA
 │
 └── frontend/                       # Next.js 15 + Tailwind CSS
     ├── app/

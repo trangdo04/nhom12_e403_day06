@@ -1,15 +1,24 @@
 from dotenv import load_dotenv
-load_dotenv()
+import os
+import sys
+
+# Thêm backend vào sys.path để có thể chạy uvicorn từ thư mục gốc
+backend_dir = os.path.dirname(os.path.abspath(__file__))
+if backend_dir not in sys.path:
+    sys.path.append(backend_dir)
+
+load_dotenv(os.path.join(backend_dir, ".env"))
 
 from fastapi import FastAPI, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
+from fastapi.responses import StreamingResponse
 from pydantic import BaseModel
 import logging
 import json
 from datetime import datetime
 from pathlib import Path
 
-from agent.agent import run_agent
+from agent.agent import run_agent, invoke_advisor_stream
 
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
@@ -23,8 +32,8 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-LOG_FILE = Path("logs/interactions.jsonl")
-LOG_FILE.parent.mkdir(exist_ok=True)
+LOG_FILE = Path(os.path.join(backend_dir, "logs/interactions.jsonl"))
+LOG_FILE.parent.mkdir(parents=True, exist_ok=True)
 
 
 class ChatRequest(BaseModel):
@@ -49,11 +58,96 @@ def chat(req: ChatRequest):
         raise HTTPException(status_code=400, detail="Message không được để trống")
     try:
         result = run_agent(req.message)
-        _log_interaction(req.session_id, req.message, result)
-        return result
+
+        # Chuẩn hóa response theo format frontend kỳ vọng
+        response_text = result.get("response", "")
+
+        # Nếu quota hết, trả về thông báo thân thiện
+        if result.get("error") == "QUOTA_EXHAUSTED":
+            response_text = (
+                "Xin lỗi, hệ thống đang tạm thời gián đoạn. "
+                "Vui lòng liên hệ hotline 18006511 để được hỗ trợ trực tiếp."
+            )
+
+        api_response = {
+            "response": response_text,
+            "data": {
+                "age": None,
+                "area": None,
+                "level": None,
+                "campuses": [],
+            },
+            "cta": [
+                {"label": "Xem học phí", "url": "https://vinschool.edu.vn/hoc-phi"},
+                {"label": "Đăng ký tuyển sinh", "url": "https://vinschool.edu.vn/dang-ky"},
+                {"label": "Liên hệ tư vấn", "url": "https://vinschool.edu.vn/lien-he"},
+            ],
+        }
+
+        _log_interaction(req.session_id, req.message, api_response)
+        return api_response
     except Exception as e:
         logger.error(f"Agent error: {e}")
         raise HTTPException(status_code=500, detail="Lỗi xử lý, vui lòng thử lại.")
+
+
+@app.post("/api/chat/stream")
+def chat_stream(req: ChatRequest):
+    """Streaming endpoint — trả về text từng chunk qua SSE."""
+    if not req.message.strip():
+        raise HTTPException(status_code=400, detail="Message không được để trống")
+
+    def generate():
+        try:
+            full_text = ""
+            for event in invoke_advisor_stream(req.message):
+                messages = event.get("messages", [])
+                if not messages:
+                    continue
+                last_msg = messages[-1]
+                # Chỉ stream các tin nhắn từ AI (không phải tool messages)
+                if hasattr(last_msg, "type") and last_msg.type in ("tool",):
+                    continue
+                content = getattr(last_msg, "content", "")
+                # Extract text từ list-of-parts hoặc string
+                if isinstance(content, list):
+                    text = " ".join(
+                        p.get("text", "") if isinstance(p, dict) else str(p)
+                        for p in content
+                    ).strip()
+                elif isinstance(content, str):
+                    text = content
+                else:
+                    continue
+                # Chỉ gửi phần text mới tăng thêm
+                if text and text != full_text and text.startswith(full_text):
+                    delta = text[len(full_text):]
+                    full_text = text
+                    data = json.dumps({"delta": delta}, ensure_ascii=False)
+                    yield f"data: {data}\n\n"
+            # Gửi event done kèm CTA
+            done_payload = json.dumps({
+                "done": True,
+                "cta": [
+                    {"label": "Xem học phí", "url": "https://vinschool.edu.vn/hoc-phi"},
+                    {"label": "Đăng ký tuyển sinh", "url": "https://vinschool.edu.vn/dang-ky"},
+                    {"label": "Liên hệ tư vấn", "url": "https://vinschool.edu.vn/lien-he"},
+                ],
+            }, ensure_ascii=False)
+            yield f"data: {done_payload}\n\n"
+        except Exception as e:
+            logger.error(f"Stream error: {e}")
+            err = json.dumps({"error": str(e)}, ensure_ascii=False)
+            yield f"data: {err}\n\n"
+
+    return StreamingResponse(
+        generate(),
+        media_type="text/event-stream",
+        headers={
+            "Cache-Control": "no-cache",
+            "X-Accel-Buffering": "no",
+        },
+    )
 
 
 @app.post("/api/log")
@@ -75,8 +169,8 @@ def _log_interaction(session_id: str, message: str, result: dict):
         "ts": datetime.utcnow().isoformat(),
         "session_id": session_id,
         "message": message,
-        "level": result["data"].get("level"),
-        "campuses": [c["name"] for c in result["data"].get("campuses", [])],
+        "level": result.get("data", {}).get("level"),
+        "campuses": [c["name"] for c in result.get("data", {}).get("campuses", [])],
     }
     with open(LOG_FILE, "a", encoding="utf-8") as f:
         f.write(json.dumps(entry, ensure_ascii=False) + "\n")

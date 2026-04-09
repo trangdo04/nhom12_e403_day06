@@ -2,7 +2,7 @@ import json
 import os
 from typing import Any
 from langgraph.types import Command
-from langgraph_tools import tool
+from langchain_core.tools import tool
 
 
 # ============================================================================
