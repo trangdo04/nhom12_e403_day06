@@ -1,0 +1,221 @@
+{
+  "chinh_sach_tuyen_sinh_vinschool": {
+    "CHINH_SACH_TUYEN_SINH": {
+      "thu_tu_uu_tien": [
+        {
+          "muc": 1,
+          "doi_tuong": "Con ruột, cháu nội/ngoại ruột của chính chủ sở hữu căn hộ/biệt thự Vinhomes",
+          "mo_ta": "Đang sinh sống tại Vinhomes, được ưu tiên xếp chỗ tại cơ sở thuộc khu đô thị đó khi còn chỗ trống."
+        },
+        {
+          "muc": 2,
+          "doi_tuong": "Con của CBNV đang làm việc tại Vinschool và Vingroup",
+          "mo_ta": "Ưu tiên xếp chỗ tại các cơ sở còn chỗ tại thời điểm tuyển sinh."
+        },
+        {
+          "muc": 3,
+          "doi_tuong": "Học sinh Vinschool chuyển cấp và học sinh Primary Starters lên lớp 1",
+          "mo_ta": "Xếp chỗ vào điểm trường phù hợp với chỉ tiêu tuyển sinh từng cơ sở."
+        },
+        {
+          "muc": 4,
+          "doi_tuong": "Các đối tượng khác",
+          "mo_ta": "Tiếp nhận đăng ký nếu còn chỉ tiêu."
+        }
+      ],
+      "quy_dinh_hoc_sinh_hien_tai": {
+        "xet_len_lop": "Năm học 2025-2026 lên 2026-2027 nếu hoàn thành chương trình và học phí.",
+        "chuyen_cap": "Áp dụng cho khối 5 lên 6 và khối 9 lên 10 theo quy chế.",
+        "chuyen_co_so": "Tiếp nhận theo thứ tự ưu tiên, còn chỗ trống và trình độ Tiếng Anh phù hợp.",
+        "chuyen_he_dao_tao": "Từ hệ Chuẩn sang Nâng cao (Cambridge) cần đạt bài kiểm tra đầu vào."
+      }
+    },
+    "DO_TUOI_TUYEN_SINH": {
+      "cac_cap_hoc": [
+        { "cap": "Mầm non", "nam_sinh": "2021-2025" },
+        { "cap": "Tiểu học", "nam_sinh": "2016-2020" },
+        { "cap": "THCS", "nam_sinh": "2012-2015" },
+        { "cap": "THPT", "nam_sinh": "2009-2011" }
+      ]
+    },
+    "QUY_DINH_SI_SO": {
+      "tieu_chuan": {
+        "mam_non": "15 - 28 học sinh/lớp",
+        "he_nang_cao": 25,
+        "he_chuan": 30,
+        "he_chuan_phu_quoc": 35
+      }
+    },
+    "DIEU_KIEN_DANG_KY": {
+      "hoc_sinh_moi": {
+        "suc_khoe": "Không mắc bệnh truyền nhiễm, bệnh bẩm sinh nguy hiểm, không có nhu cầu giáo dục đặc biệt.",
+        "hoc_tap_hanh_kiem": "Yêu cầu đạt mức Hoàn thành/Khá/Tốt tùy theo cấp học dự tuyển."
+      }
+    },
+    "QUY_TRINH_TUYEN_SINH": {
+      "quy_trinh_cho_hoc_sinh_moi": [
+        "Đăng ký thông tin học sinh tại ứng dụng VinschoolOne trên điện thoại",
+        "Tiếp nhận học sinh theo thứ tự ưu tiên và đạt điều kiện tuyển sinh",
+        "Học sinh tham gia dự tuyển đầu vào",
+        "Phụ huynh hoàn thiện thủ tục nhập học nếu học sinh đạt dự tuyển",
+        "Học sinh nhập học chính thức theo thông báo của Nhà trường"
+      ],
+      "quy_trinh_cho_hoc_sinh_chuyen_cap": [
+        "Phụ huynh đăng ký nguyện vọng cho con tiếp tục học tại Vinschool theo thông báo của Nhà trường",
+        "Nhà trường tiến hành đánh giá học sinh theo Quy chế xét học sinh chuyển cấp",
+        "Phụ huynh hoàn thiện thủ tục nhập học nếu học sinh đủ điều kiện lên cấp học tiếp theo",
+        "Học sinh nhập học chính thức theo thông báo của Nhà trường"
+      ]
+    },
+    "DU_TUYEN_DAU_VAO": {
+      "tan_suat": "01 lần/học kỳ",
+      "mon_thi_he_chuan": ["Toán", "Tiếng Việt/Ngữ Văn", "Tiếng Anh", "Năng lực tư duy", "Phỏng vấn"],
+      "mon_thi_he_nang_cao": ["Toán (Anh/Việt)", "Tiếng Anh/Nói Tiếng Anh", "Ngữ Văn", "Tư duy nhận thức bằng Tiếng Anh", "Phỏng vấn"]
+    },
+    "HUONG_DAN_HO_SO": {
+    "1_doi_voi_hoc_sinh_mam_non": [
+      {
+        "stt": 1,
+        "danh_muc": "01 ảnh thẻ cỡ 4x6 của Học sinh mới chụp trong thời gian 01 tháng (bản mềm)",
+        "nop_khi_du_tuyen": true,
+        "nop_khi_nhap_hoc": false
+      },
+      {
+        "stt": 2,
+        "danh_muc": "01 giấy khám sức khỏe tổng quát của Học sinh có xác nhận của bác sĩ và đóng dấu của cơ quan y tế mới cấp trong vòng 01 tháng (bản mềm)",
+        "nop_khi_du_tuyen": true,
+        "nop_khi_nhap_hoc": false
+      },
+      {
+        "stt": 3,
+        "danh_muc": "01 giấy khai sinh của Học sinh (bản cứng, có chứng thực)",
+        "nop_khi_du_tuyen": false,
+        "nop_khi_nhap_hoc": true
+      },
+      {
+        "stt": 4,
+        "danh_muc": "Phiếu đưa đón Học sinh (bản cứng)",
+        "nop_khi_du_tuyen": false,
+        "nop_khi_nhap_hoc": true
+      },
+      {
+        "stt": 5,
+        "danh_muc": "Sổ tiêm chủng (bản mềm)",
+        "nop_khi_du_tuyen": false,
+        "nop_khi_nhap_hoc": true
+      },
+      {
+        "stt": 6,
+        "danh_muc": "01 ảnh thẻ cỡ 4x6 của bố ruột của Học sinh (bản mềm)",
+        "nop_khi_du_tuyen": false,
+        "nop_khi_nhap_hoc": true
+      },
+      {
+        "stt": 7,
+        "danh_muc": "01 ảnh thẻ cỡ 4x6 của mẹ ruột của Học sinh (bản mềm)",
+        "nop_khi_du_tuyen": false,
+        "nop_khi_nhap_hoc": true
+      },
+      {
+        "stt": 8,
+        "danh_muc": "01 ảnh thẻ cỡ 4x6 của người giám hộ đăng ký đón Học sinh tại trường (bản mềm)",
+        "nop_khi_du_tuyen": false,
+        "nop_khi_nhap_hoc": true
+      }
+    ],
+    "2_doi_voi_hoc_sinh_pho_thong": [
+        {
+          "stt": 1,
+          "danh_muc": "01 ảnh thẻ cỡ 4x6 của học sinh mới chụp trong thời gian 01 tháng (bản mềm)",
+          "nop_khi_du_tuyen": true,
+          "nop_khi_nhap_hoc": false
+        },
+        {
+          "stt": 2,
+          "danh_muc": "01 giấy khai sinh của học sinh (bản cứng, có chứng thực)",
+          "nop_khi_du_tuyen": false,
+          "nop_khi_nhap_hoc": true
+        },
+        {
+          "stt": 3,
+          "danh_muc": "Toàn bộ học bạ của học sinh ở cấp đang học (bản gốc)",
+          "nop_khi_du_tuyen": false,
+          "nop_khi_nhap_hoc": true
+        },
+        {
+          "stt": 4,
+          "danh_muc": "Giấy chứng nhận hoàn thành Tiểu học (bản gốc, dành cho học sinh nhập học từ khối 6 đến khối 9)",
+          "nop_khi_du_tuyen": false,
+          "nop_khi_nhap_hoc": true
+        },
+        {
+          "stt": 5,
+          "danh_muc": "Bằng tốt nghiệp THCS hoặc giấy chứng nhận tốt nghiệp tạm thời đối với học sinh vào lớp 10 (bản gốc)",
+          "nop_khi_du_tuyen": false,
+          "nop_khi_nhap_hoc": true
+        },
+        {
+          "stt": 6,
+          "danh_muc": "Giấy chứng nhận trúng tuyển vào lớp 10 THPT (đối với học sinh đã nhập học vào trường THPT tại tỉnh/thành phố khác sau đó chuyển đến Vinschool)",
+          "nop_khi_du_tuyen": false,
+          "nop_khi_nhap_hoc": true
+        },
+        {
+          "stt": 7,
+          "danh_muc": "Đơn xin chuyển trường có ý kiến xác nhận của trường chuyển đi và chuyển đến (bản gốc, trừ trường hợp đầu cấp)",
+          "nop_khi_du_tuyen": false,
+          "nop_khi_nhap_hoc": true
+        },
+        {
+          "stt": 8,
+          "danh_muc": "Giấy giới thiệu chuyển trường với Học sinh THCS và THPT (bản gốc, có xác nhận của Hiệu trưởng/Chủ tịch xã/Sở GD&ĐT tùy trường hợp)",
+          "nop_khi_du_tuyen": false,
+          "nop_khi_nhap_hoc": true
+        },
+        {
+          "stt": 9,
+          "danh_muc": "Giấy xác nhận về thông tin cư trú theo mẫu CT07/ CT08 (bản gốc)",
+          "nop_khi_du_tuyen": false,
+          "nop_khi_nhap_hoc": true
+        },
+        {
+          "stt": 10,
+          "danh_muc": "Bảo hiểm y tế bắt buộc còn thời hạn hoặc thẻ ngành của bố/mẹ nếu là con quân nhân (bản mềm)",
+          "nop_khi_du_tuyen": false,
+          "nop_khi_nhap_hoc": true
+        },
+        {
+          "stt": 11,
+          "danh_muc": "01 ảnh thẻ cỡ 4x6 của bố ruột của học sinh (bản mềm)",
+          "nop_khi_du_tuyen": false,
+          "nop_khi_nhap_hoc": true
+        },
+        {
+          "stt": 12,
+          "danh_muc": "01 ảnh thẻ cỡ 4x6 của mẹ ruột của học sinh (bản mềm)",
+          "nop_khi_du_tuyen": false,
+          "nop_khi_nhap_hoc": true
+        },
+        {
+          "stt": 13,
+          "danh_muc": "Các giấy tờ khác theo yêu cầu (tùy thuộc vào thời điểm tuyển sinh)",
+          "nop_khi_du_tuyen": false,
+          "nop_khi_nhap_hoc": true
+        }
+      ]
+    },
+    "THOI_GIAN_TUYEN_SINH": {
+      "mam_non": "Từ tháng 1 hàng năm (liên tục)",
+      "pho_thong": {
+        "dot_1": "Tháng 1 - Tháng 8 (Nhập học tháng 8)",
+        "dot_2": "Tháng 11 - Tháng 12 (Nhập học tháng 1)"
+      }
+    },
+    "LIEN_HE": {
+      "app": "VinschoolOne",
+      "hotline": "18006511",
+      "email_mien_bac": "info.mb@vinschool.edu.vn",
+      "email_mien_nam": "info.mn@vinschool.edu.vn"
+    }
+  }
+}

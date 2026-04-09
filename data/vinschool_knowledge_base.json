@@ -1,0 +1,105 @@
+{
+  "overview": [
+    {
+      "title": "Giới thiệu Vinschool",
+      "summary": "Vinschool cung cấp giáo dục toàn diện kết hợp học thuật, công nghệ và phát triển cảm xúc.",
+      "details": "Vinschool hướng tới phát triển học sinh cả về trí tuệ, cảm xúc và giá trị nhân văn, giúp các em thích nghi với thế giới thay đổi nhanh chóng."
+    },
+    {
+      "title": "Định hướng giáo dục",
+      "summary": "Vinschool tập trung phát triển học sinh toàn diện cả về học thuật và cảm xúc.",
+      "details": "Nhà trường kết hợp giáo dục công nghệ, AI và hệ thống chăm sóc học đường nhằm giúp học sinh phát triển cân bằng và bền vững."
+    }
+  ],
+  "features": [
+    {
+      "title": "Chương trình AI",
+      "summary": "Vinschool triển khai chương trình AI chính khóa từ mầm non đến trung học.",
+      "details": "Học sinh được học cách hiểu, ứng dụng và sử dụng AI một cách sáng tạo và có trách nhiệm."
+    },
+    {
+      "title": "Chăm sóc học đường",
+      "summary": "Vinschool có hệ thống chăm sóc học đường hỗ trợ phát triển cảm xúc và tinh thần.",
+      "details": "Hệ thống Pastoral Care bao gồm sức khỏe tinh thần, an toàn, hỗ trợ học thuật và gắn kết cộng đồng."
+    },
+    {
+      "title": "Chứng nhận quốc tế CIS",
+      "summary": "Vinschool đạt kiểm định quốc tế CIS cho toàn hệ thống.",
+      "details": "Đây là tiêu chuẩn quốc tế đảm bảo chất lượng giáo dục và môi trường học tập."
+    },
+    {
+      "title": "Chương trình Cambridge tích hợp",
+      "summary": "Vinschool tích hợp chương trình Cambridge với chương trình Việt Nam.",
+      "details": "Học sinh được tiếp cận giáo dục quốc tế ngay từ sớm với chương trình được Việt hóa."
+    },
+    {
+      "title": "Mô hình đại học thu nhỏ",
+      "summary": "Học sinh được học hơn 50 môn theo mô hình đại học thu nhỏ.",
+      "details": "Chương trình giúp học sinh định hướng nghề nghiệp và tăng lợi thế khi ứng tuyển đại học."
+    },
+    {
+      "title": "Giáo dục công dân toàn cầu",
+      "summary": "Vinschool đào tạo học sinh trở thành công dân toàn cầu.",
+      "details": "Bao gồm các môn như Việt Nam học, CLISE và Công dân toàn cầu giúp học sinh phát triển toàn diện."
+    },
+    {
+      "title": "Đội ngũ giáo viên chuẩn quốc tế",
+      "summary": "Giáo viên đạt tiêu chuẩn quốc tế.",
+      "details": "Vinschool áp dụng bộ chuẩn giáo viên và hiệu trưởng theo tiêu chuẩn quốc tế của Úc."
+    },
+    {
+      "title": "Cá nhân hóa lộ trình học",
+      "summary": "Học sinh được xây dựng lộ trình học tập cá nhân hóa.",
+      "details": "Học sinh được tư vấn 1-1 để chọn môn học phù hợp với năng lực và định hướng nghề nghiệp."
+    }
+  ],
+  "achievements": [
+    {
+      "title": "Thành tích IGCSE",
+      "summary": "Học sinh đạt 1771 điểm A*/A trong kỳ thi quốc tế.",
+      "details": "Đây là kết quả nổi bật trong các kỳ thi IGCSE và A-Level."
+    },
+    {
+      "title": "Điểm SAT",
+      "summary": "20% học sinh đạt SAT trên 1500.",
+      "details": "Thuộc top 2% điểm SAT cao nhất thế giới."
+    },
+    {
+      "title": "IELTS",
+      "summary": "60% học sinh đạt IELTS từ 7.0 trở lên.",
+      "details": "Trong đó 10% đạt 8.0–8.5."
+    },
+    {
+      "title": "Kết quả AP",
+      "summary": "60% bài thi AP đạt từ 4/5 trở lên.",
+      "details": "Đây là mức điểm xuất sắc trong các kỳ thi AP."
+    },
+    {
+      "title": "Đại học top Việt Nam",
+      "summary": "60% học sinh đỗ vào các đại học top tại Việt Nam.",
+      "details": "Bao gồm các trường như Bách Khoa, Ngoại thương, Kinh tế Quốc dân."
+    },
+    {
+      "title": "Học bổng quốc tế",
+      "summary": "25% học sinh nhận học bổng du học lên đến 100%.",
+      "details": "Bao gồm các trường thuộc Ivy League, Russell Group và G8."
+    }
+  ],
+  "admission": [
+    {
+      "title": "Độ tuổi tuyển sinh",
+      "summary": "Vinschool tuyển sinh từ 12 tháng đến 17 tuổi.",
+      "details": "Bao gồm từ bậc mầm non đến trung học phổ thông."
+    },
+    {
+      "title": "Khu vực tuyển sinh",
+      "summary": "Vinschool có nhiều cơ sở trên toàn quốc.",
+      "details": "Bao gồm Hà Nội, Hưng Yên, TP.HCM, Hải Phòng, Thanh Hóa và Phú Quốc."
+    },
+    {
+      "title": "Đăng ký tuyển sinh",
+      "summary": "Phụ huynh có thể đăng ký tuyển sinh trực tuyến.",
+      "details": "Cần điền thông tin để được tư vấn chi tiết từ nhà trường."
+    }
+  ]
+}
