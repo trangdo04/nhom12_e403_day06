@@ -206,37 +206,79 @@ def invoke_advisor(query: str, conversation_history: list = None, max_retries: i
 
     raise last_error
 
+# Global in-memory store for session history
+GLOBAL_SESSIONS = {}
+MAX_HISTORY_TURNS = 3 # 3 pairs of Human + AI messages
 
-def run_agent(message: str, conversation_history: list = None) -> dict:
-    """Hàm wrapper để tương thích với main.py."""
-    return invoke_advisor(message, conversation_history)
+def get_session_history(session_id: str) -> list:
+    return GLOBAL_SESSIONS.get(session_id, []).copy()
+
+def save_session_history(session_id: str, human_msg: str, ai_msg: str):
+    if session_id not in GLOBAL_SESSIONS:
+        GLOBAL_SESSIONS[session_id] = []
+    
+    # We store the base messages
+    from langchain_core.messages import HumanMessage, AIMessage
+    GLOBAL_SESSIONS[session_id].append(HumanMessage(content=human_msg))
+    GLOBAL_SESSIONS[session_id].append(AIMessage(content=ai_msg))
+    
+    # Cap history based on MAX_HISTORY_TURNS * 2 (each turn = 1 human + 1 AI msg)
+    if len(GLOBAL_SESSIONS[session_id]) > MAX_HISTORY_TURNS * 2:
+        GLOBAL_SESSIONS[session_id] = GLOBAL_SESSIONS[session_id][-(MAX_HISTORY_TURNS * 2):]
+
+def run_agent(message: str, session_id: str = "anonymous") -> dict:
+    """Hàm wrapper để tương thích với main.py với lưu vết history."""
+    history = get_session_history(session_id)
+    result = invoke_advisor(message, history)
+    
+    # Cập nhật lịch sử
+    if result and result.get("response") and result.get("error") != "QUOTA_EXHAUSTED":
+        save_session_history(session_id, message, result["response"])
+        
+    return result
 
 
 # ============================================================================
 # Agent Invocation - Streaming (cho chat UI)
 # ============================================================================
 
-def invoke_advisor_stream(query: str, conversation_history: list = None):
+def invoke_advisor_stream(query: str, session_id: str = "anonymous"):
     """
-    Gọi agent với streaming (tối ưu cho chat UI)
+    Gọi agent với streaming (tối ưu cho chat UI) có lưu lịch sử 3 tin nhắn gần nhất
     
     Args:
         query: Câu hỏi từ người dùng
-        conversation_history: Lịch sử hội thoại
+        session_id: ID phiên hội thoại để lưu vết context
     
     Yields:
         Streaming events trực tiếp từ agent
     """
     agent = create_advisor_agent()
     
-    messages = conversation_history or []
+    messages = get_session_history(session_id)
     messages.append(HumanMessage(content=query))
     
     state = {"messages": messages}
+    full_ai_response = ""
     
     # Stream events
-    for event in agent.stream(state, stream_mode="values"):
+    for event in agent.stream(state, stream_mode="messages"):
+        chunk = event[0] if isinstance(event, tuple) else event
+        if hasattr(chunk, "type") and chunk.type not in ("tool", "human") and not getattr(chunk, "tool_call_chunks", None):
+            content = getattr(chunk, "content", "")
+            if isinstance(content, str):
+                full_ai_response += content
+            elif isinstance(content, list):
+                text = " ".join(
+                    p.get("text", "") if isinstance(p, dict) else str(p)
+                    for p in content
+                ).strip()
+                full_ai_response += text
+                
         yield event
+
+    if full_ai_response:
+        save_session_history(session_id, query, full_ai_response)
 
 
 # ============================================================================

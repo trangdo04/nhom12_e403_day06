@@ -57,7 +57,7 @@ def chat(req: ChatRequest):
     if not req.message.strip():
         raise HTTPException(status_code=400, detail="Message không được để trống")
     try:
-        result = run_agent(req.message)
+        result = run_agent(req.message, session_id=req.session_id)
 
         # Chuẩn hóa response theo format frontend kỳ vọng
         response_text = result.get("response", "")
@@ -100,31 +100,28 @@ def chat_stream(req: ChatRequest):
     def generate():
         try:
             full_text = ""
-            for event in invoke_advisor_stream(req.message):
-                messages = event.get("messages", [])
-                if not messages:
-                    continue
-                last_msg = messages[-1]
-                # Chỉ stream các tin nhắn từ AI (không phải tool messages)
-                if hasattr(last_msg, "type") and last_msg.type in ("tool",):
-                    continue
-                content = getattr(last_msg, "content", "")
-                # Extract text từ list-of-parts hoặc string
-                if isinstance(content, list):
-                    text = " ".join(
-                        p.get("text", "") if isinstance(p, dict) else str(p)
-                        for p in content
-                    ).strip()
-                elif isinstance(content, str):
-                    text = content
-                else:
-                    continue
-                # Chỉ gửi phần text mới tăng thêm
-                if text and text != full_text and text.startswith(full_text):
-                    delta = text[len(full_text):]
-                    full_text = text
-                    data = json.dumps({"delta": delta}, ensure_ascii=False)
-                    yield f"data: {data}\n\n"
+            for event in invoke_advisor_stream(req.message, session_id=req.session_id):
+                if isinstance(event, tuple) and len(event) == 2:
+                    chunk, metadata = event
+                    
+                    if hasattr(chunk, "type") and chunk.type in ("tool", "human"):
+                        continue
+                        
+                    if hasattr(chunk, "tool_call_chunks") and chunk.tool_call_chunks:
+                        continue
+
+                    content = getattr(chunk, "content", "")
+                    if isinstance(content, str) and content:
+                        data = json.dumps({"delta": content}, ensure_ascii=False)
+                        yield f"data: {data}\n\n"
+                    elif isinstance(content, list):
+                        text = " ".join(
+                            p.get("text", "") if isinstance(p, dict) else str(p)
+                            for p in content
+                        ).strip()
+                        if text:
+                            data = json.dumps({"delta": text}, ensure_ascii=False)
+                            yield f"data: {data}\n\n"
             # Gửi event done kèm CTA
             done_payload = json.dumps({
                 "done": True,

@@ -50,17 +50,72 @@ export default function ChatWindow() {
     setLoading(true);
 
     try {
-      const result = await sendMessage(messageText, SESSION_ID);
       const assistantId = uuidv4();
       const assistantMsg: Message = {
         id: assistantId,
         role: "assistant",
-        content: result.response,
+        content: "",
         timestamp: new Date(),
       };
       setMessages((prev) => [...prev, assistantMsg]);
-      setResults((prev) => new Map(prev).set(assistantId, result));
-    } catch {
+
+      // Call streaming API
+      const API_URL = process.env.NEXT_PUBLIC_API_URL || "http://localhost:8000";
+      const res = await fetch(`${API_URL}/api/chat/stream`, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ message: messageText, session_id: SESSION_ID }),
+      });
+
+      if (!res.ok) {
+        throw new Error(`API error: ${res.status}`);
+      }
+      
+      setLoading(false); // Hide loading indicator once stream starts
+
+      const reader = res.body!.getReader();
+      const decoder = new TextDecoder("utf-8");
+      let done = false;
+      let fullContent = "";
+      let buffer = "";
+
+      while (!done) {
+        const { value, done: readerDone } = await reader.read();
+        done = readerDone;
+        if (value) {
+          buffer += decoder.decode(value, { stream: true });
+          const lines = buffer.split("\n\n");
+          buffer = lines.pop() || ""; // Keep the incomplete line in the buffer
+          
+          for (const line of lines) {
+            const dataMatch = line.match(/^data:\s*(.*)$/m);
+            if (dataMatch && dataMatch[1]) {
+              try {
+                const parsed = JSON.parse(dataMatch[1].trim());
+                if (parsed.delta) {
+                  fullContent += parsed.delta;
+                  setMessages((prev) =>
+                    prev.map((m) =>
+                      m.id === assistantId ? { ...m, content: fullContent } : m
+                    )
+                  );
+                }
+                if (parsed.done) {
+                  const result: ChatResponse = {
+                    response: fullContent,
+                    cta: parsed.cta || [],
+                    data: parsed.data || { age: null, area: null, level: null, campuses: [] },
+                  };
+                  setResults((prev) => new Map(prev).set(assistantId, result));
+                }
+              } catch (e) {
+                // Should be safer now that we wait for \n\n
+              }
+            }
+          }
+        }
+      }
+    } catch (err) {
       const errMsg: Message = {
         id: uuidv4(),
         role: "assistant",
