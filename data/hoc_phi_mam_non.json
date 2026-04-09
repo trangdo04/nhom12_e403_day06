@@ -1,0 +1,292 @@
+{
+    "Học phí chính khóa": [
+        {
+            "Địa điểm": "Hà Nội, Hải Phòng, Thanh Hóa, Hưng Yên",
+            "Năm học": "2026-2027",
+            "Học phí": [
+                {
+                    "Hệ đào tạo": "Hệ chuẩn (Học sinh 12 tháng - 17 tháng)",
+                    "Học phí kỳ 1": 52162500,
+                    "Học phí kỳ 2": 40125000,
+                    "Học phí cả năm": 92287500
+                },
+                {
+                    "Hệ đào tạo": "Hệ Chuẩn (Học sinh từ 18 tháng - 5 tuổi)",
+                    "Học phí kỳ 1": 43485000,
+                    "Học phí kỳ 2": 33450000,
+                    "Học phí cả năm": 76935000
+                },
+                {
+                    "Hệ đào tạo": "Hệ Nâng cao",
+                    "Học phí kỳ 1": 60905000,
+                    "Học phí kỳ 2": 46850000,
+                    "Học phí cả năm": 107755000
+                },
+                {
+                    "Hệ đào tạo": "Hệ Nâng cao Cambridge (Chỉ dành cho Học sinh khối Primary Starters)",
+                    "Học phí kỳ 1": 91550000,
+                    "Học phí kỳ 2": 80900000,
+                    "Học phí cả năm": 172450000
+                }
+            ]
+        },
+        {
+            "Địa điểm": "Thành phố Hồ Chí Minh",
+            "Năm học": "2026-2027",
+            "Học phí": [
+                {
+                    "Hệ đào tạo": "Hệ Nâng cao",
+                    "Học phí kỳ 1": 65390000,
+                    "Học phí kỳ 2": 50300000,
+                    "Học phí cả năm": 115690000
+                },
+                {
+                    "Hệ đào tạo": "Hệ Nâng cao Cambridge (Chỉ dành cho Học sinh khối Primary Starters)",
+                    "Học phí kỳ 1": 92930000,
+                    "Học phí kỳ 2": 80900000,
+                    "Học phí cả năm": 173830000
+                }
+            ]
+        },
+        {
+            "Địa điểm": "Phú Quốc",
+            "Năm học": "2026-2027",
+            "Học phí": [
+                {
+                    "Hệ đào tạo": "Hệ chuẩn Vinschool",
+                    "Học phí kỳ 1": 31200000,
+                    "Học phí kỳ 2": 24000000,
+                    "Học phí cả năm": 55200000
+                }
+            ]
+        }
+    ],
+    "Chính sách ưu đãi và miễn giảm" : [
+        {
+            "Địa điểm":"Hà Nội, Hải Phòng, Thanh Hóa, Hưng Yên",
+            "Năm học":"2026-2027",
+            "Chính sách": [
+                {
+                    "Tên": "Voucher tri ân, gói ưu đãi.",
+                    "Đối tượng": "Người có vouncher",
+                    "Độ ưu tiên": 1
+                },
+                {
+                    "Tên": "Ưu đãi học phí chính khóa",
+                    "Đối tượng": "Học sinh là con ruột hoặc con nuôi hợp pháp của cán bộ nhân viên Tập đoàn Vingroup.",
+                    "Độ ưu tiên": 2
+                },
+                {
+                    "Tên": "Ưu đãi phí dịch vụ xe buýt",
+                    "Đối tượng": "Học sinh có anh, chị, em đang cùng theo học tại Vinschool.",
+                    "Độ ưu tiên": 3
+                },
+                {
+                    "Tên": "Chiết khấu Vinclub theo chính sách áp dụng tại thời điểm đóng phí.",
+                    "Đối tượng": "",
+                    "Độ ưu tiên": 4
+                },
+                {
+                    "Tên": "Chiết khấu 5% khi đóng phí theo năm: áp dụng đối với học phí chính khóa, phí dịch vụ bán trú và phí dịch vụ xe buýt đón/trả",
+                    "Đối tượng": "Học sinh khi Phụ huynh đóng học phí theo năm",
+                    "Độ ưu tiên": 5
+                }
+            ],
+            "Lưu ý": "Đối với ưu đãi tại mục 2 và mục 3, Phụ huynh có trách nhiệm nộp bổ sung phần phí đã được ưu đãi trước đó kể từ thời điểm xảy ra các trường hợp sau đây: Bố/ Mẹ của Học sinh (là cán bộ nhân viên tại các công ty thuộc Tập đoàn Vingroup) thay đổi cấp bậc cán bộ hoặc chấm dứt hợp đồng lao động chính thức. Anh/ chị/ em theo quy định tại mục 3 của Học sinh dừng học tại Vinschool."
+        },
+        {
+            "Địa điểm":"Thành phố Hồ Chí Minh",
+            "Năm học":"2026-2027",
+            "Chính sách": [
+                {
+                    "Tên": "Voucher tri ân, gói ưu đãi.",
+                    "Đối tượng": "Người có vouncher",
+                    "Độ ưu tiên": 1
+                },
+                {
+                    "Tên": "Ưu đãi học phí chính khóa",
+                    "Đối tượng": "Học sinh là con ruột hoặc con nuôi hợp pháp của cán bộ nhân viên Tập đoàn Vingroup.",
+                    "Độ ưu tiên": 2
+                },
+                {
+                    "Tên": "Chiết khấu Vinclub theo chính sách áp dụng tại thời điểm đóng phí.",
+                    "Đối tượng": "",
+                    "Độ ưu tiên": 3
+                },
+                {
+                    "Tên": "Chiết khấu 5% khi đóng phí theo năm: áp dụng đối với học phí chính khóa, phí dịch vụ bán trú và phí dịch vụ xe buýt đón/trả",
+                    "Đối tượng": "Học sinh khi Phụ huynh đóng học phí theo năm",
+                    "Độ ưu tiên": 4
+                }
+            ],
+            "Lưu ý": "Đối với các khoản ưu đãi tại mục 2, Phụ huynh có trách nhiệm nộp bổ sung phần phí đã được ưu đãi trước đó kể từ thời điểm Bố/ Mẹ của Học sinh (là cán bộ nhân viên tại các công ty thuộc Tập đoàn Vingroup) thay đổi cấp bậc cán bộ hoặc chấm dứt hợp đồng lao động chính thức."
+        },
+        {
+            "Địa điểm":"Hà Nội, Hải Phòng, Thanh Hóa, Hưng Yên",
+            "Năm học":"2026-2027",
+            "Chính sách": [
+                {
+                    "Tên": "Voucher tri ân, gói ưu đãi.",
+                    "Đối tượng": "Người có vouncher",
+                    "Độ ưu tiên": 1
+                },
+                {
+                    "Tên": "Ưu đãi học phí chính khóa",
+                    "Đối tượng": "Học sinh là con ruột hoặc con nuôi hợp pháp của cán bộ nhân viên Tập đoàn Vingroup.",
+                    "Độ ưu tiên": 2
+                },
+                {
+                    "Tên": "Ưu đãi phí dịch vụ xe buýt",
+                    "Đối tượng": "Học sinh có anh, chị, em đang cùng theo học tại Vinschool.",
+                    "Độ ưu tiên": 3
+                },
+                {
+                    "Tên": "Chiết khấu Vinclub theo chính sách áp dụng tại thời điểm đóng phí.",
+                    "Đối tượng": "",
+                    "Độ ưu tiên": 4
+                },
+                {
+                    "Tên": "Chiết khấu 5% khi đóng phí theo năm: áp dụng đối với học phí chính khóa, phí dịch vụ bán trú và phí dịch vụ xe buýt đón/trả",
+                    "Đối tượng": "Học sinh khi Phụ huynh đóng học phí theo năm",
+                    "Độ ưu tiên": 5
+                }
+            ],
+            "Lưu ý": "Đối với ưu đãi tại mục 2 và mục 3, Phụ huynh có trách nhiệm nộp bổ sung phần phí đã được ưu đãi trước đó kể từ thời điểm xảy ra các trường hợp sau đây: Bố/ Mẹ của Học sinh (là cán bộ nhân viên tại các công ty thuộc Tập đoàn Vingroup) thay đổi cấp bậc cán bộ hoặc chấm dứt hợp đồng lao động chính thức. Anh/ chị/ em theo quy định tại mục 3 của Học sinh dừng học tại Vinschool."
+        }
+    ],
+    "Các khoản phí khác": [
+        {
+            "Địa điểm": "Hà Nội, Hải Phòng, Thanh Hóa, Hưng Yên",
+            "Năm học":"2026-2027",
+            "Phí": [
+                {
+                    "Tên": "Phí đăng ký tuyển sinh",
+                    "Nội dung": "Phụ huynh đóng phí đăng ký tuyển sinh cho Học sinh ngay sau khi nhận được thông báo hướng dẫn đóng phí của Nhà trường. Việc hoàn tất khoản phí này chưa được coi là Nhà trường đã chấp nhận Học sinh vào học. Mức phí: 2.250.000 đồng. Khoản phí này KHÔNG được hoàn trả hay chuyển nhượng trong mọi trường hợp (kể cả khi Học sinh rút hồ sơ hay không đạt đầu vào...)."
+                },
+                {
+                    "Tên": "Phí dịch vụ bán trú (*)",
+                    "Nội dung": "Phí dịch vụ bán trú bao gồm bữa sáng, bữa trưa, bữa phụ chiều, các bữa ăn nhẹ và dịch vụ chăm sóc bán trú tại trường. Đây là dịch vụ được áp dụng chung cho tất cả Học sinh của Vinschool. Nhà trường quyết toán hoàn phí dịch vụ bán trú vào cuối mỗi năm học cho các kỳ nghỉ lễ dài từ 03 ngày học liên tiếp trở lên sau khi đã trừ ngày học bù theo lịch của Nhà trường và cho những khoảng nghỉ dài từ 03 ngày học liên tiếp của Học sinh khi Phụ huynh đăng ký thông tin xin nghỉ trên ứng dụng của Nhà trường. Mức phí học kỳ 1 là 11050000, học kỳ 2 là 8500000"
+                },
+                {
+                    "Tên": "Phí phát triển trường",
+                    "Nội dung": "Phí phát triển trường là phí thường niên, áp dụng đối với cả Học sinh đang học và Học sinh mới nhập học. Khoản phí này không được hoàn lại hay chuyển nhượng trong mọi trường hợp (ngay cả khi Học sinh chưa đi học). Mức phí cho hệ chuẩn là 4200000 đồng/năm học. Mức phí cho hệ Nâng cao và Nâng cao Cambridge là 4800000 đồng/năm học Học sinh nhập học vào học kỳ 2 đóng 50% mức phí cả năm."
+                },
+                {
+                    "Tên" : "Phí học phẩm",
+                    "Nội dung": "Phí học phẩm là phí thường niên, áp dụng đối với cả Học sinh đang học và Học sinh mới nhập học. Đây là chi phí để trang bị các dụng cụ học tập trong lớp học, phần mềm học tập, tài liệu và các học phẩm đặc thù của chương trình học. Mức phí cho hệ chuẩn và hệ Nâng cao: 1650000 đồng/năm học. Mức phí cho Hệ Nâng cao Cambridge: 2700000 đồng/năm học. Học sinh nhập học vào học kỳ 2 đóng 50% mức phí cả năm."
+                },
+                {
+                    "Tên": "Phí đồng phục (*)",
+                    "Nội dung": "Mức phí đồng phục: 1270000 đồng/set của nữ/nam. Nữ: 02 chân váy, 01 áo polo ngắn tay, 01 áo len, 01 áo nỉ, 1 bộ thể thao mùa hè. Nam: 01 quần soóc, 01 quần dài, 01 áo polo ngắn tay, 01 áo len, 01 áo nỉ, 1 bộ thể thao mùa hè."
+                },
+                {
+                    "Tên": "Phí hoạt động trải nghiệm",
+                    "Nội dung": "Nhà trường có các chương trình hoạt động ngoại khóa bắt buộc hàng năm nhằm giúp Học sinh được trải nghiệm thực tế và ứng dụng các kiến thức đã học. Mức phí hoạt động trải nghiệm: 1.000.000 đồng/năm học; Học sinh nhập học vào học kỳ 2 đóng 50% mức phí cả năm."
+                },
+                {
+                    "Tên": "Phí dịch vụ xe buýt đón/trả Học sinh",
+                    "Nội dung": "Nhà trường cung cấp dịch vụ xe buýt với hai hình thức Tại điểm và Tại nhà (xe đón/trả học sinh ở đầu ngõ nếu ngõ nhỏ, không thuận lợi cho xe đi vào; xe đón/trả học sinh trước sảnh đối với các khu chung cư). Mức phí đón tại điểm học kỳ 1: 10400000 , học kỳ 2: 8000000. Mức phí đón tại nhà học kỳ 1: 16900000, học kỳ 2: 13000000. Nhà trường chỉ cung cấp dịch vụ xe buýt hai chiều, nếu Học sinh chỉ đi một chiều thì phí dịch vụ xe buýt vẫn cần đóng cả hai chiều theo đúng quy định. Dịch vụ xe buýt là dịch vụ lựa chọn thêm và được sắp xếp căn cứ theo nguyện vọng của Phụ huynh và khả năng đáp ứng của Nhà trường. Dịch vụ xe buýt chỉ được đảm bảo trong trường hợp Phụ huynh đã hoàn tất việc đóng phí. Phụ huynh cần đăng ký thông tin trên ứng dụng VinschoolOne tối thiểu 15 ngày trước ngày dừng dịch vụ. Thời hạn thay đổi/đăng ký mới cho kỳ xếp tuyến đầu năm học mới là trước ngày 15/05/2026. Nhà trường quyết toán hoàn phí dịch vụ xe buýt vào cuối mỗi năm học cho các kỳ nghỉ lễ dài từ 03 ngày học liên tiếp trở lên sau khi đã trừ ngày học bù theo lịch của Nhà trường."
+                },
+                {
+                    "Tên": "Phí dịch vụ trông Học sinh ngoài giờ",
+                    "Nội dung": "Phụ huynh có nhu cầu gửi Học sinh ngoài khung giờ hoạt động chính thức của Nhà trường có thể đăng ký và nộp phí. Mức phí Từ 07h00 đến 07h30: 50.000 đồng; Mức phí Từ 17h30 đến 18h30: 100.000 đồng."
+                }
+            ],
+            "Lưu ý": "(*) Các khoản phí có thể thay đổi trong năm học nếu có biến động lớn trên thị trường về giá cả đầu vào..., sẽ được Nhà trường thông báo 30 ngày trước khi chính thức áp dụng."
+        },
+        {
+            "Địa điểm": "Thành phố Hồ Chí Minh",
+            "Năm học":"2026-2027",
+            "Phí": [
+                {
+                    "Tên": "Phí đăng ký tuyển sinh",
+                    "Nội dung": "Phụ huynh đóng phí đăng ký tuyển sinh cho Học sinh ngay sau khi nhận được thông báo hướng dẫn đóng phí của Nhà trường. Việc hoàn tất khoản phí này chưa được coi là Nhà trường đã chấp nhận Học sinh vào học. Mức phí: 2.250.000 đồng. Khoản phí này KHÔNG được hoàn trả hay chuyển nhượng trong mọi trường hợp (kể cả khi Học sinh rút hồ sơ hay không đạt đầu vào...)."
+                },
+                {
+                    "Tên": "Phí dịch vụ bán trú (*)",
+                    "Nội dung": "Phí dịch vụ bán trú bao gồm bữa sáng, bữa trưa, bữa phụ chiều, các bữa ăn nhẹ và dịch vụ chăm sóc bán trú tại trường. Đây là dịch vụ được áp dụng chung cho tất cả Học sinh của Vinschool. Nhà trường quyết toán hoàn phí dịch vụ bán trú vào cuối mỗi năm học cho các kỳ nghỉ lễ dài từ 03 ngày học liên tiếp trở lên sau khi đã trừ ngày học bù theo lịch của Nhà trường và cho những khoảng nghỉ dài từ 03 ngày học liên tiếp của Học sinh khi Phụ huynh đăng ký thông tin xin nghỉ trên ứng dụng của Nhà trường. Mức phí học kỳ 1 là 13000000, học kỳ 2 là 10000000"
+                },
+                {
+                    "Tên": "Phí phát triển trường",
+                    "Nội dung": "Phí phát triển trường là phí thường niên, áp dụng đối với cả Học sinh đang học và Học sinh mới nhập học. Khoản phí này không được hoàn lại hay chuyển nhượng trong mọi trường hợp (ngay cả khi Học sinh chưa đi học). Mức phí cho hệ chuẩn là 4200000 đồng/năm học. Mức phí cho hệ Nâng cao và Nâng cao Cambridge là 4800000 đồng/năm học Học sinh nhập học vào học kỳ 2 đóng 50% mức phí cả năm."
+                },
+                {
+                    "Tên" : "Phí học phẩm",
+                    "Nội dung": "Phí học phẩm là phí thường niên, áp dụng đối với cả Học sinh đang học và Học sinh mới nhập học. Đây là chi phí để trang bị các dụng cụ học tập trong lớp học, phần mềm học tập, tài liệu và các học phẩm đặc thù của chương trình học. Mức phí hệ Nâng cao: 1650000 đồng/năm học. Mức phí cho Hệ Nâng cao Cambridge: 2700000 đồng/năm học. Học sinh nhập học vào học kỳ 2 đóng 50% mức phí cả năm."
+                },
+                {
+                    "Tên": "Phí đồng phục (*)",
+                    "Nội dung": "Nữ: 900000 đồng/set bao gồm 02 chân váy, 02 áo polo ngắn tay, 01 bộ thể thao, 01 nón. Nam: 890000 đồng/set bao gồm 02 quần soóc, 02 áo polo ngắn tay, 01 bộ thể thao, 01 nón."
+                },
+                {
+                    "Tên": "Phí hoạt động trải nghiệm",
+                    "Nội dung": "Nhà trường có các chương trình hoạt động ngoại khóa bắt buộc hàng năm nhằm giúp Học sinh được trải nghiệm thực tế và ứng dụng các kiến thức đã học. Mức phí hoạt động trải nghiệm: 1000000 đồng/năm học; Học sinh nhập học vào học kỳ 2 đóng 50% mức phí cả năm."
+                },
+                {
+                    "Tên": "Phí dịch vụ trông Học sinh ngoài giờ",
+                    "Nội dung": "Phụ huynh có nhu cầu gửi Học sinh từ 17h15 đến 18h15 có thể đăng ký và nộp phí trông ngoài giờ với mức 100.000 đồng. Nhà trường sẽ gửi thông báo thu phí trông ngoài giờ tới Phụ huynh theo từng tháng."
+                }
+            ],
+            "Lưu ý": "(*) Các khoản phí có thể thay đổi trong năm học nếu có biến động lớn trên thị trường về giá cả đầu vào..., sẽ được Nhà trường thông báo 30 ngày trước khi chính thức áp dụng."
+        },
+        {
+            "Địa điểm": "Phú Quốc",
+            "Năm học":"2026-2027",
+            "Phí": [
+                {
+                    "Tên": "Phí đăng ký tuyển sinh",
+                    "Nội dung": "Phụ huynh đóng phí đăng ký tuyển sinh cho Học sinh ngay sau khi nhận được thông báo hướng dẫn đóng phí của Nhà trường. Việc hoàn tất khoản phí này chưa được coi là Nhà trường đã chấp nhận Học sinh vào học. Mức phí: 2.250.000 đồng. Khoản phí này KHÔNG được hoàn trả hay chuyển nhượng trong mọi trường hợp (kể cả khi Học sinh rút hồ sơ hay không đạt đầu vào...)."
+                },
+                {
+                    "Tên": "Phí dịch vụ bán trú (*)",
+                    "Nội dung": "Phí dịch vụ bán trú bao gồm bữa sáng, bữa trưa, bữa phụ chiều, các bữa ăn nhẹ và dịch vụ chăm sóc bán trú tại trường. Đây là dịch vụ được áp dụng chung cho tất cả Học sinh của Vinschool. Nhà trường quyết toán hoàn phí dịch vụ bán trú vào cuối mỗi năm học cho các kỳ nghỉ lễ dài từ 03 ngày học liên tiếp trở lên sau khi đã trừ ngày học bù theo lịch của Nhà trường và cho những khoảng nghỉ dài từ 03 ngày học liên tiếp của Học sinh khi Phụ huynh đăng ký thông tin xin nghỉ trên ứng dụng của Nhà trường. Mức phí học kỳ 1 là 11050000, học kỳ 2 là 8500000"
+                },
+                {
+                    "Tên": "Phí phát triển trường",
+                    "Nội dung": "Phí phát triển trường là phí thường niên, áp dụng đối với cả Học sinh đang học và Học sinh mới nhập học. Khoản phí này không được hoàn lại hay chuyển nhượng trong mọi trường hợp (ngay cả khi Học sinh chưa đi học). Mức phí cho hệ chuẩn là 4200000 đồng/năm học. Mức phí cho hệ Nâng cao và Nâng cao Cambridge là 4800000 đồng/năm học Học sinh nhập học vào học kỳ 2 đóng 50% mức phí cả năm."
+                },
+                {
+                    "Tên" : "Phí học phẩm",
+                    "Nội dung": "Phí học phẩm là phí thường niên, áp dụng đối với cả Học sinh đang học và Học sinh mới nhập học. Đây là chi phí để trang bị các dụng cụ học tập trong lớp học, phần mềm học tập, tài liệu và các học phẩm đặc thù của chương trình học. Mức phí cho hệ chuẩn và hệ Nâng cao: 1650000 đồng/năm học. Mức phí cho Hệ Nâng cao Cambridge: 2700000 đồng/năm học. Học sinh nhập học vào học kỳ 2 đóng 50% mức phí cả năm."
+                },
+                {
+                    "Tên": "Phí đồng phục (*)",
+                    "Nội dung": "Mức phí đồng phục: 1270000 đồng/set của nữ/nam. Nữ: 02 chân váy, 01 áo polo ngắn tay, 01 áo len, 01 áo nỉ, 1 bộ thể thao mùa hè. Nam: 01 quần soóc, 01 quần dài, 01 áo polo ngắn tay, 01 áo len, 01 áo nỉ, 1 bộ thể thao mùa hè."
+                },
+                {
+                    "Tên": "Phí hoạt động trải nghiệm",
+                    "Nội dung": "Nhà trường có các chương trình hoạt động ngoại khóa bắt buộc hàng năm nhằm giúp Học sinh được trải nghiệm thực tế và ứng dụng các kiến thức đã học. Mức phí hoạt động trải nghiệm: 1.000.000 đồng/năm học; Học sinh nhập học vào học kỳ 2 đóng 50% mức phí cả năm."
+                },
+                {
+                    "Tên": "Phí dịch vụ xe buýt đón/trả Học sinh",
+                    "Nội dung": "Nhà trường cung cấp dịch vụ xe buýt với hai hình thức Tại điểm và Tại nhà (xe đón/trả học sinh ở đầu ngõ nếu ngõ nhỏ, không thuận lợi cho xe đi vào; xe đón/trả học sinh trước sảnh đối với các khu chung cư). Đối với hình thức Tại điểm, mức phí được quy định cụ thể theo từng khu vực: khu vực Gành Dầu có phí cả năm là 10.925.000 đồng (Học kỳ 1: 6.500.000 đồng, Học kỳ 2: 5.000.000 đồng); khu vực Dương Đông/ Cửa Cạn/ Cửa Dương có phí cả năm là 13.110.000 đồng (Học kỳ 1: 7.800.000 đồng, Học kỳ 2: 6.000.000 đồng); và khu vực Hàm Ninh/ An Thới có phí cả năm là 17.480.000 đồng (Học kỳ 1: 10.400.000 đồng, Học kỳ 2: 8.000.000 đồng). Đối với hình thức Tại nhà, mức phí được tính dựa trên khoảng cách di chuyển: khoảng cách dưới 20 km có phí cả năm là 28.405.000 đồng (Học kỳ 1: 16.900.000 đồng, Học kỳ 2: 13.000.000 đồng); từ 20 km đến dưới 30 km có phí cả năm là 30.590.000 đồng (Học kỳ 1: 18.200.000 đồng, Học kỳ 2: 14.000.000 đồng); và từ 30 km đến dưới 50 km có phí cả năm là 49.162.500 đồng (Học kỳ 1: 29.250.000 đồng, Học kỳ 2: 22.500.000 đồng). Lưu ý, mức phí cả năm đã bao gồm mức giảm giá 5%."
+                },
+                {
+                    "Tên": "Phí dịch vụ trông Học sinh ngoài giờ",
+                    "Nội dung": "Phụ huynh có nhu cầu gửi Học sinh từ 17h15 đến 18h15 có thể đăng ký và nộp phí trông ngoài giờ với mức 100.000 đồng. Nhà trường sẽ gửi thông báo thu phí trông ngoài giờ tới Phụ huynh theo từng tháng."
+                }
+            ],
+            "Lưu ý": "(*) Các khoản phí có thể thay đổi trong năm học nếu có biến động lớn trên thị trường về giá cả đầu vào..., sẽ được Nhà trường thông báo 30 ngày trước khi chính thức áp dụng."
+        }
+    ],
+    "Thời hạn đóng phí và phương thức thanh toán": [
+        "Đối với học sinh đang học tại Vinschool: Thời hạn đóng phí cả năm để được hưởng chiết khấu 5% hoặc thời hạn đóng phí của học kỳ 1 muộn nhất vào ngày 15/5/2026, và thời hạn đóng phí của học kỳ 2 muộn nhất vào ngày 15/12/2026. Phụ huynh đóng phí sau thời hạn quy định sẽ không được hưởng chiết khấu theo mục này.",
+        "Đối với học sinh nhập học mới vào năm học 2026–2027: Thời hạn đóng phí cần thực hiện theo thông báo của Nhà trường.",
+        "Nếu Nhà trường vẫn chưa nhận được học phí và các khoản phí liên quan sau ngày quy định nộp phí, các khoản phí đến hạn phải nộp sẽ tự động tăng thêm 0,03%/ngày chậm trên số tiền chưa thanh toán và Phụ huynh có trách nhiệm nộp cả phần tăng thêm này.",
+        "Trường hợp Phụ huynh không đóng phí đầy đủ, đúng hạn theo quy định tài chính hoặc không nộp bổ sung phí theo thông báo của Vinschool, Nhà trường có quyền không xếp lớp và không cung cấp dịch vụ cho Học sinh.",
+        "Phụ huynh có trách nhiệm hoàn tất phí theo thời hạn quy định của Nhà trường. Thông báo nhắc nhở của Nhà trường vì một lý do nào đó không đến được với Phụ huynh không phải là lý do để Phụ huynh trì hoãn trách nhiệm thanh toán các khoản phí cho Học sinh theo quy định."
+    ],
+    "Quy định về phí khi học sinh rút hồ sơ/bảo lưu/thôi học/trường hợp bất khả kháng": [
+        "Khi Học sinh rút hồ sơ/ bảo lưu/ thôi học, trong mọi trường hợp, Phụ huynh thông báo với Phòng Tuyển sinh tối thiểu 15 ngày trước ngày Học sinh rút hồ sơ/ bảo lưu/ thôi học chính thức. Quy định này áp dụng với cả Học sinh mới làm thủ tục nhập học vào trường và Học sinh đang học tại Vinschool.",
+        "Các khoản phí khi Học sinh rút hồ sơ/ bảo lưu/ thôi học được quy định như sau:",
+        "2.1. Học phí: sẽ được tính đến hết ngày Học sinh chính thức rút hồ sơ/ bảo lưu/ thôi học theo quy định nêu trên (không phụ thuộc vào việc Học sinh có đến trường hay không). Phụ huynh có trách nhiệm đóng đầy đủ học phí cho Nhà trường theo quy định này trong vòng 05 (năm) ngày kể từ ngày nhận được thông báo của Vinschool. Trường hợp Phụ huynh đã nộp trước học phí, Nhà trường sẽ hoàn lại phần học phí còn dư (nếu có). Khi Học sinh nghỉ học và xin bảo lưu chỗ tại lớp học cũ, Phụ huynh cần duy trì việc đóng học phí cho Học sinh trong suốt thời gian bảo lưu. Trường hợp Phụ huynh không đóng học phí cho Học sinh trong thời gian nghỉ bảo lưu, Nhà trường sẽ xếp cho Học sinh vào một lớp khác căn cứ vào chỗ trống tại thời điểm Học sinh quay lại học.",
+        "2.2.Phí dịch vụ bán trú: phí dịch vụ bán trú sẽ được tính đến ngày học cuối cùng của Học sinh và Phụ huynh có trách nhiệm đóng đầy đủ phí cho Nhà trường theo quy định. Nhà trường sẽ hoàn lại phí dịch vụ bán trú còn dư (nếu có).",
+        "2.3. Phí phát triển trường: không được hoàn lại hay chuyển nhượng trong mọi trường hợp.",
+        "2.4. Phí học phẩm: không được hoàn lại hay chuyển nhượng trong trường hợp Học sinh đã đi học.",
+        "2.5. Phí đồng phục: chỉ được hoàn lại trong trường hợp Học sinh rút hồ sơ/ thôi học và số phí hoàn lại tương ứng với danh mục đồng phục mà Học sinh chưa được nhận.",
+        "2.6. Phí hoạt động trải nghiệm được hoàn lại trong trường hợp: Học sinh rút hồ sơ/ thôi học trước khi năm học bắt đầu; Học sinh không tham gia hoạt động trải nghiệm trong cả 1 kỳ học và đã có đơn được Ban Giám hiệu Nhà trường phê duyệt trước.",
+        "2.7. Phí dịch vụ xe buýt: sẽ được tính từ ngày Phụ huynh thông báo đến 15 ngày sau (không phụ thuộc vào việc Học sinh có đến trường hay không). Phụ huynh có trách nhiệm đóng đầy đủ phí dịch vụ xe buýt cho Nhà trường theo quy định này trong vòng 05 ngày kể từ ngày nhận được thông báo của Vinschool. Trường hợp Phụ huynh đã nộp trước phí dịch vụ xe buýt, Nhà trường sẽ hoàn lại phần phí còn dư (nếu có).",
+        "Các khoản phí còn dư (nếu có) sẽ được hoàn lại cho Phụ huynh trong vòng 30 ngày kể từ ngày nhận được đầy đủ thông tin về tài khoản ngân hàng của Phụ huynh hoặc ngày học cuối cùng của Học sinh tùy thời điểm nào đến sau.",
+        "Trong các trường hợp bất khả kháng, việc thu hoặc hoàn phí sẽ được Nhà trường công bố căn cứ theo thực tế tại thời điểm đó."
+    ]
+}

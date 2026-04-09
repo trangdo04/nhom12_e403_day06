@@ -226,3 +226,4 @@ yarn-error.log*
 .pnpm-debug.log*
 
 guide/
+crawl_data/
