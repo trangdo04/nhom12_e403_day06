@@ -7,10 +7,10 @@ export default function ChatWidget() {
   const [open, setOpen] = useState(false);
 
   return (
-    <div className="fixed bottom-6 right-6 z-50">
+    <div className="fixed bottom-6 right-6 z-50 flex flex-col items-end">
       {/* Chat Panel */}
       {open && (
-        <div className="mb-4 w-[380px] h-[560px] bg-white rounded-2xl shadow-2xl border border-gray-200 flex flex-col overflow-hidden">
+        <div className="mb-3 w-[calc(100vw-3rem)] sm:w-[380px] h-[500px] sm:h-[560px] bg-white rounded-2xl shadow-[0_8px_30px_rgb(0,0,0,0.12)] border border-gray-100 flex flex-col overflow-hidden animate-in slide-in-from-bottom-2 fade-in duration-200 origin-bottom-right">
           {/* Header */}
           <div className="bg-[#003087] text-white px-4 py-3 flex items-center justify-between">
             <div className="flex items-center gap-3">
@@ -35,7 +35,7 @@ export default function ChatWidget() {
           </div>
 
           {/* Chat Content */}
-          <div className="flex-1 overflow-hidden">
+          <div className="flex-1 overflow-hidden relative">
             <ChatWindow />
           </div>
         </div>
@@ -44,15 +44,15 @@ export default function ChatWidget() {
       {/* Toggle Button */}
       <button
         onClick={() => setOpen((prev) => !prev)}
-        className="w-14 h-14 bg-[#003087] hover:bg-[#0057B8] text-white rounded-full shadow-lg flex items-center justify-center transition-all duration-200 hover:scale-110"
+        className="w-14 h-14 bg-[#003087] hover:bg-[#0057B8] text-white rounded-full shadow-[0_4px_14px_0_rgba(0,48,135,0.39)] hover:shadow-[0_6px_20px_rgba(0,48,135,0.23)] flex items-center justify-center transition-all duration-300 hover:scale-105 active:scale-95"
         aria-label="Mở chat tư vấn tuyển sinh"
       >
         {open ? (
-          <svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor">
-            <path d="M6 6l8 8M14 6l-8 8" stroke="white" strokeWidth="2" strokeLinecap="round" fill="none" />
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+            <polyline points="6 9 12 15 18 9"></polyline>
           </svg>
         ) : (
-          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
             <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" />
           </svg>
         )}

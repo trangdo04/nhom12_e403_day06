@@ -26,16 +26,17 @@ export default function ChatWindow() {
   const [results, setResults] = useState<Map<string, ChatResponse>>(new Map());
   const [input, setInput] = useState("");
   const [loading, setLoading] = useState(false);
+  const [isStreaming, setIsStreaming] = useState(false);
   const [showQuickReplies, setShowQuickReplies] = useState(true);
   const bottomRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    bottomRef.current?.scrollIntoView({ behavior: "smooth" });
-  }, [messages, loading]);
+    bottomRef.current?.scrollIntoView({ behavior: isStreaming ? "auto" : "smooth" });
+  }, [messages, loading, isStreaming]);
 
   async function handleSend(text?: string) {
     const messageText = (text || input).trim();
-    if (!messageText || loading) return;
+    if (!messageText || loading || isStreaming) return;
 
     setInput("");
     setShowQuickReplies(false);
@@ -48,16 +49,10 @@ export default function ChatWindow() {
     };
     setMessages((prev) => [...prev, userMsg]);
     setLoading(true);
+    setIsStreaming(true);
 
     try {
       const assistantId = uuidv4();
-      const assistantMsg: Message = {
-        id: assistantId,
-        role: "assistant",
-        content: "",
-        timestamp: new Date(),
-      };
-      setMessages((prev) => [...prev, assistantMsg]);
 
       // Call streaming API
       const API_URL = process.env.NEXT_PUBLIC_API_URL || "http://localhost:8000";
@@ -71,13 +66,12 @@ export default function ChatWindow() {
         throw new Error(`API error: ${res.status}`);
       }
       
-      setLoading(false); // Hide loading indicator once stream starts
-
       const reader = res.body!.getReader();
       const decoder = new TextDecoder("utf-8");
       let done = false;
       let fullContent = "";
       let buffer = "";
+      let firstChunkReceived = false;
 
       while (!done) {
         const { value, done: readerDone } = await reader.read();
@@ -92,6 +86,20 @@ export default function ChatWindow() {
             if (dataMatch && dataMatch[1]) {
               try {
                 const parsed = JSON.parse(dataMatch[1].trim());
+                
+                if (!firstChunkReceived && (parsed.delta || parsed.done)) {
+                  firstChunkReceived = true;
+                  setLoading(false);
+                  const assistantMsg: Message = {
+                    id: assistantId,
+                    role: "assistant",
+                    content: "",
+                    timestamp: new Date(),
+                    streaming: true,
+                  };
+                  setMessages((prev) => [...prev, assistantMsg]);
+                }
+
                 if (parsed.delta) {
                   fullContent += parsed.delta;
                   setMessages((prev) =>
@@ -101,6 +109,11 @@ export default function ChatWindow() {
                   );
                 }
                 if (parsed.done) {
+                  setMessages((prev) =>
+                    prev.map((m) =>
+                      m.id === assistantId ? { ...m, streaming: false } : m
+                    )
+                  );
                   const result: ChatResponse = {
                     response: fullContent,
                     cta: parsed.cta || [],
@@ -115,6 +128,23 @@ export default function ChatWindow() {
           }
         }
       }
+      
+      // Process remaining buffer if stream closed without final \n\n
+      if (buffer.trim()) {
+        const dataMatch = buffer.match(/^data:\s*(.*)$/m);
+        if (dataMatch && dataMatch[1]) {
+          try {
+            const parsed = JSON.parse(dataMatch[1].trim());
+            if (parsed.delta) {
+              fullContent += parsed.delta;
+              setMessages((prev) => prev.map((m) => m.id === assistantId ? { ...m, content: fullContent } : m));
+            }
+            if (parsed.done) {
+              setMessages((prev) => prev.map((m) => m.id === assistantId ? { ...m, streaming: false } : m));
+            }
+          } catch (e) {}
+        }
+      }
     } catch (err) {
       const errMsg: Message = {
         id: uuidv4(),
@@ -125,6 +155,7 @@ export default function ChatWindow() {
       setMessages((prev) => [...prev, errMsg]);
     } finally {
       setLoading(false);
+      setIsStreaming(false);
     }
   }
 
@@ -136,9 +167,11 @@ export default function ChatWindow() {
     <div className="flex flex-col h-full">
       {/* Messages */}
       <div className="flex-1 overflow-y-auto py-4 chat-scrollbar">
-        {messages.map((msg) => (
+        {messages.map((msg, index) => {
+          const showAvatar = index === 0 || messages[index - 1].role !== msg.role;
+          return (
           <div key={msg.id}>
-            <MessageBubble message={msg} />
+            <MessageBubble message={msg} showAvatar={showAvatar} />
             {msg.role === "assistant" && results.has(msg.id) && (
               <ResultCard
                 data={results.get(msg.id)!.data}
@@ -148,7 +181,8 @@ export default function ChatWindow() {
               />
             )}
           </div>
-        ))}
+          );
+        })}
 
         {loading && (
           <div className="flex justify-start mb-3 px-4">
@@ -181,14 +215,14 @@ export default function ChatWindow() {
             type="text"
             value={input}
             onChange={(e) => setInput(e.target.value)}
-            onKeyDown={(e) => e.key === "Enter" && !e.shiftKey && handleSend()}
+            onKeyDown={(e) => e.key === "Enter" && !e.shiftKey && !e.nativeEvent.isComposing && handleSend()}
             placeholder="Nhập câu hỏi (vd: Con tôi 7 tuổi ở Gia Lâm...)"
             className="flex-1 text-sm border border-gray-200 rounded-xl px-4 py-2.5 outline-none focus:border-[#003087] focus:ring-1 focus:ring-[#003087] transition-colors"
-            disabled={loading}
+            disabled={loading || isStreaming}
           />
           <button
             onClick={() => handleSend()}
-            disabled={loading || !input.trim()}
+            disabled={loading || isStreaming || !input.trim()}
             className="bg-[#003087] text-white px-4 py-2.5 rounded-xl hover:bg-[#0057B8] transition-colors disabled:opacity-40 disabled:cursor-not-allowed flex items-center gap-1 text-sm font-medium"
           >
             Gửi

@@ -149,7 +149,7 @@ def invoke_advisor(query: str, conversation_history: list = None, max_retries: i
             # Xu ly ca hai truong hop: content la string hoac list of parts
             # (cac model Gemini moi hon tra ve list [{"type": "text", "text": "..."}])
             if isinstance(content, list):
-                response_text = " ".join(
+                response_text = "".join(
                     part.get("text", "") if isinstance(part, dict) else str(part)
                     for part in content
                 ).strip()
@@ -269,10 +269,10 @@ def invoke_advisor_stream(query: str, session_id: str = "anonymous"):
             if isinstance(content, str):
                 full_ai_response += content
             elif isinstance(content, list):
-                text = " ".join(
+                text = "".join(
                     p.get("text", "") if isinstance(p, dict) else str(p)
                     for p in content
-                ).strip()
+                )
                 full_ai_response += text
                 
         yield event

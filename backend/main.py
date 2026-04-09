@@ -115,10 +115,10 @@ def chat_stream(req: ChatRequest):
                         data = json.dumps({"delta": content}, ensure_ascii=False)
                         yield f"data: {data}\n\n"
                     elif isinstance(content, list):
-                        text = " ".join(
+                        text = "".join(
                             p.get("text", "") if isinstance(p, dict) else str(p)
                             for p in content
-                        ).strip()
+                        )
                         if text:
                             data = json.dumps({"delta": text}, ensure_ascii=False)
                             yield f"data: {data}\n\n"
